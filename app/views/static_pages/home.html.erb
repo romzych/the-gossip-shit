@@ -41,10 +41,10 @@
                 <%= @array_author[i].last_name %>
             </div>
             <div class="cell" data-title="Occupation">
-                <%= line.title %>
+                <a href="/gossip_solo/<%= line.id%>"><%= line.title %></a>
             </div>
             <div class="cell" data-title="Occupation">
-                <a href=""><%= line.content %></a>
+                <%= line.content %>
             </div>
         </div>  
         <% i = i + 1 %>

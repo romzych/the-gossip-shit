@@ -1,0 +1,2 @@
+module GossipSoloHelper
+end
