@@ -1,0 +1,53 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="<%= root_path %>">appuie ici c'est pour aller a la home page fraté</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-item nav-link active" href="<%= contact_path %>">Contact moi MTN<span class="sr-only">(current)</span></a>
+        <a class="nav-item nav-link" href="<%= team_path %>">Team de ouf mon pote</a>
+      </div>
+    </div>
+  </nav>
+  <audio src="asset" autoplay></audio>
+  <div class="center-div">
+<h1>Page d'accueil</h1>
+<div class="wrapper">
+  
+    <div class="table">
+      
+      <div class="row header">
+        <div class="cell">
+          First name
+        </div>
+        <div class="cell">
+          Last name
+        </div>
+        <div class="cell">
+          Title
+        </div>
+        <div class="cell">
+          Gossip
+        </div>
+      </div>
+      <% i = 0%>
+      <% @array_gossip.each do |line| %>
+        <div class="row">
+            <div class="cell" data-title="Name">
+                <%= @array_author[i].first_name %>
+            </div>
+            <div class="cell" data-title="Age">
+                <%= @array_author[i].last_name %>
+            </div>
+            <div class="cell" data-title="Occupation">
+                <%= line.title %>
+            </div>
+            <div class="cell" data-title="Occupation">
+                <a href=""><%= line.content %></a>
+            </div>
+        </div>  
+        <% i = i + 1 %>
+      <% end %>
+    </div>
+</div>
