@@ -6,6 +6,7 @@
   <li>Contenu :<%= Gossip.find(@gossip_id).content %></li>
   <li>Prénom : <%= Gossip.find(@gossip_id).author.first_name %></li>
   <li>Nom : <%= Gossip.find(@gossip_id).author.last_name %></li>
+  <li>Date de creation : <%= Gossip.find(@gossip_id).created_at%></li>
 </ul>
 
 <a href="<%= root_path %>">retour a l'accueil</a>
